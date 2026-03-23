@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#F7E6E6">
 
     <Button
         android:id="@+id/sparkButton"
@@ -13,6 +14,7 @@
         android:layout_height="88dp"
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="34dp"
+        android:backgroundTint="#886176"
         android:text="spark"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,6 +26,7 @@
         android:layout_height="88dp"
         android:layout_marginStart="34dp"
         android:layout_marginBottom="34dp"
+        android:backgroundTint="#2F4858"
         android:text="clear"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +51,7 @@
         android:layout_height="272dp"
         android:layout_marginStart="39dp"
         android:layout_marginBottom="383dp"
-        android:text="result "
+        android:text="Result "
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,11 +61,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginBottom="676dp"
-        android:text="Generate your Spark"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="668dp"
+        android:text="Generate your Spark ~"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

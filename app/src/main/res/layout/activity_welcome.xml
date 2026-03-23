@@ -5,7 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Welcome">
+    tools:context=".Welcome"
+    android:background="#886176">
+
+    <ImageView
+        android:id="@+id/imageSun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sun_glasses"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageGlasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sun_smile"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/button"
@@ -14,7 +35,34 @@
         android:layout_marginStart="57dp"
         android:layout_marginBottom="45dp"
         android:text="continue"
-
+        android:backgroundTint="#886176"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="108dp"
+        android:text="click here to.."
+        app:layout_constraintBottom_toBottomOf="@+id/imageSun"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/descriptionView"
+        android:layout_width="212dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="176dp"
+        android:fontFamily="serif-monospace"
+        android:text="welcome to the spark app, where your motivation awaits..."
+        android:textAlignment="center"
+        android:textColor="#876075"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/imageSun"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
