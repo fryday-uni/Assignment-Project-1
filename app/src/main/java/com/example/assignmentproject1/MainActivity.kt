@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 Time.AFTERNOON_SNACK_TIME -> "send a quick 'thinking of you' message"
                 Time.DINNER,Time.EVENING -> "call a friend or relative for a 5-minute catchup"
                 Time.AFTER_DINNER,Time.NIGHT -> "Leave a thoughtful comment on a friends's post"
-                else -> "Please put _ instead of space "
+                else -> "Please spell correctly, or put _ instead of space "
             }
 
             sparkResult.text = sparkSuggestion
