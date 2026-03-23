@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         EVENING,
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,34 +35,58 @@ class MainActivity : AppCompatActivity() {
             // user input of time set to uppercase to make it not case-sensitive
             val timeInput = currentTime.text.toString().uppercase()
 
-            // changing this stupid string into enum value, stole from ChatGPT
-            val time = try {
-                Time.valueOf(timeInput)
-            } catch (e: Exception) {
-                null
+            val timeInputIsNumber = timeInput.toIntOrNull()
+
+            if (timeInputIsNumber == null ) {
+                // if time input is a string it'll be null since it cant turn into an int
+
+
+                // changing this stupid string into enum value, stole from ChatGPT
+                val time = try {
+                    Time.valueOf(timeInput)
+                } catch (e: Exception) {
+                    null
+                }
+
+                //sets the spark suggestion depending on time
+                val sparkSuggestion = when (time) {
+                    Time.MORNING -> "Send a good morning text to a family member. "
+                    Time.MID_MORNING -> "Reach out to a colleague with a quick thank you"
+                    Time.AFTERNOON -> "Share a funny meme or interesting link with a friend"
+                    Time.AFTERNOON_SNACK_TIME -> "send a quick 'thinking of you' message"
+                    Time.DINNER, Time.EVENING -> "call a friend or relative for a 5-minute catchup"
+                    Time.AFTER_DINNER, Time.NIGHT -> "Leave a thoughtful comment on a friends's post"
+                    else -> "Please spell correctly, or put _ instead of space, if you using :00 format, just enter the hour "
+                }
+
+                sparkResult.text = sparkSuggestion
+
+            }
+                //if it's a number instead it'll be between these ranges and the phrase is equal to it
+           else { val sparkSuggestion = when (timeInputIsNumber) {
+                in 0..8 -> "Send a good morning text to a family member. "
+                in 9..12 -> "Reach out to a colleague with a quick thank you"
+                in 13..15 -> "Share a funny meme or interesting link with a friend"
+                in 16..18 -> "send a quick 'thinking of you' message"
+                in 19..20 -> "call a friend or relative for a 5-minute catchup"
+                in 20..23 -> "Leave a thoughtful comment on a friends's post"
+                else -> "please don't use :00 time format, just enter the hour "
+
             }
 
-            //sets the spark suggestion depending on time
-            val sparkSuggestion = when(time) {
-                Time.MORNING -> "Send a good morning text to a family member. "
-                Time.MID_MORNING -> "Reach out to a colleague with a quick thank you"
-                Time.AFTERNOON -> "Share a funny meme or interesting link with a friend"
-                Time.AFTERNOON_SNACK_TIME -> "send a quick 'thinking of you' message"
-                Time.DINNER,Time.EVENING -> "call a friend or relative for a 5-minute catchup"
-                Time.AFTER_DINNER,Time.NIGHT -> "Leave a thoughtful comment on a friends's post"
-                else -> "Please spell correctly, or put _ instead of space "
-            }
+                sparkResult.text = sparkSuggestion
 
-            sparkResult.text = sparkSuggestion
+           }
 
         }
+
         //makes the button clear both
         clearButton.setOnClickListener {
             sparkResult.text = ""
             currentTime.text.clear()
 
-
         }
 
     }
 }
+
