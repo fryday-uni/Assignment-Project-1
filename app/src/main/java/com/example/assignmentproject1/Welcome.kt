@@ -17,12 +17,12 @@ class Welcome : AppCompatActivity() {
 
         val welcomeButton = findViewById<Button>(R.id.button)
 
-        // trying to make the sun smile, image is off and is turned on by the continue button
+        // trying to make the sun smile, image is off by default and is turned on by the continue button
         val sunSmile = findViewById<ImageView>(R.id.imageGlasses)
 
         welcomeButton.setOnClickListener {
 
-            sunSmile.visibility = View.VISIBLE  //turning the image on
+            sunSmile.visibility = View.VISIBLE  //turns the image on
 
 
            //first waits 1.5 seconds

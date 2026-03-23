@@ -3,6 +3,7 @@ package com.example.assignmentproject1
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -27,9 +28,8 @@ class MainActivity : AppCompatActivity() {
         // declaring the variables and connecting them to respective buttons
         val currentTime = findViewById<EditText>(R.id.timeEditText)
         val sparkResult = findViewById<TextView>(R.id.resultView)
-        val printTextView = findViewById<Button>(R.id.sparkButton)
-        val clearButton = findViewById<Button>(R.id.clearButton)
-
+        val printTextView = findViewById<ImageButton>(R.id.sparkButton)
+        val clearButton = findViewById<ImageButton>(R.id.clearButton)
 
         printTextView.setOnClickListener {
             // user input of time set to uppercase to make it not case-sensitive
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 // if time input is a string it'll be null since it cant turn into an int
 
 
-                // changing this stupid string into enum value, stole from ChatGPT
+                // changing this  string into enum value,adapted with assistance from ChatGPT (OpenAI), 2026
                 val time = try {
                     Time.valueOf(timeInput)
                 } catch (e: Exception) {
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        //makes the button clear both
+        //makes the button clear both texts
         clearButton.setOnClickListener {
             sparkResult.text = ""
             currentTime.text.clear()

@@ -6,31 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#F7E6E6">
+    android:background="#886176">
 
-    <Button
-        android:id="@+id/sparkButton"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="34dp"
-        android:backgroundTint="#886176"
-        android:text="spark"
-        android:textSize="14sp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/main_bg" />
 
-    <Button
+    <ImageButton
         android:id="@+id/clearButton"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="34dp"
-        android:backgroundTint="#2F4858"
-        android:text="clear"
-        android:textSize="14sp"
+        android:layout_width="113dp"
+        android:layout_height="137dp"
+        android:layout_marginEnd="272dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/clear_icon" />
 
     <EditText
         android:id="@+id/timeEditText"
@@ -69,4 +64,16 @@
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/sparkButton"
+        android:layout_width="107dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/spark_icon" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
