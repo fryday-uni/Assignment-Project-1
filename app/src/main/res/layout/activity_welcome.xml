@@ -32,28 +32,29 @@
         android:id="@+id/button"
         android:layout_width="297dp"
         android:layout_height="54dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginBottom="45dp"
-        android:text="continue"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#886176"
+        android:text="continue"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="156dp"
         android:text="click here to.."
+        android:textColor="#281C1F"
         app:layout_constraintBottom_toBottomOf="@+id/imageSun"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/descriptionView"
         android:layout_width="212dp"
         android:layout_height="69dp"
-        android:layout_marginStart="96dp"
         android:layout_marginBottom="176dp"
         android:fontFamily="serif-monospace"
         android:text="welcome to the spark app, where your motivation awaits..."
@@ -63,6 +64,7 @@
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="@+id/imageSun"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,6 @@
 package com.example.assignmentproject1
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView

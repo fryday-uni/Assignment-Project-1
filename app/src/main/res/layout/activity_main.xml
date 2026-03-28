@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#886176">
+    android:background="#886176"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -20,59 +20,64 @@
         android:id="@+id/clearButton"
         android:layout_width="113dp"
         android:layout_height="137dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/clear_icon" />
 
     <EditText
         android:id="@+id/timeEditText"
         android:layout_width="289dp"
         android:layout_height="58dp"
-        android:layout_marginStart="60dp"
         android:layout_marginBottom="260dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="time "
+        android:inputType="text"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/resultView"
         android:layout_width="332dp"
         android:layout_height="272dp"
-        android:layout_marginStart="39dp"
         android:layout_marginBottom="383dp"
         android:text="Result "
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginBottom="668dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="548dp"
         android:text="Generate your Spark ~"
         android:textAlignment="center"
+        android:textColor="#020100"
         android:textSize="20sp"
         android:typeface="monospace"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/sparkButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/sparkButton"
         android:layout_width="107dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="4dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/spark_icon" />
 
