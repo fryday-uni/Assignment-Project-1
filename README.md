@@ -28,10 +28,11 @@ The app will launch and you can start using it
 ## Screenshots 
 
 <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/67ef4270-d51e-4731-be04-6322f4e6cb64" />
-<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/8c697ef7-8bf6-492a-a792-6f8c376eb515" />
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/8c697ef7-8bf6-492a-a792-6f8c376eb515" />
 
 
 
 # References
-ChatGPT. (2026). Assistance with Kotlin delay and input validation.
-OpenAI. https://chat.openai.com
+OpenAI. (2026) ChatGPT response on converting a string to an enum in Kotlin. 
+Available at: https://chat.openai.com/ 
+(Accessed: 28 March 2026).
