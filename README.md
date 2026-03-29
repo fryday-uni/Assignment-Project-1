@@ -30,7 +30,9 @@ The app will launch and you can start using it
 <img width="360" height="800" alt="image" src="https://github.com/user-attachments/assets/67ef4270-d51e-4731-be04-6322f4e6cb64" />
 <img width="360" height="800" alt="image" src="https://github.com/user-attachments/assets/8c697ef7-8bf6-492a-a792-6f8c376eb515" />
 
+## Explanation video 
 
+https://youtu.be/7H-55kEJ5aI
 
 # References
 OpenAI. (2026) ChatGPT response on converting a string to an enum in Kotlin. 
