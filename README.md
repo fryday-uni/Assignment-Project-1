@@ -1,3 +1,6 @@
+# **chipego munthali ST10534015**
+## IMAD5112
+
 # What is the app?
 
 The Spark App is designed to give users a small "spark" of inspiration throughout the day. Based on the time entered 
